@@ -23,7 +23,7 @@ This project has not yet achieved results. <!-- [Next Steps](#next-steps) are li
 ## Presentation
 (youtube video not yet available)
 
-![image](https://github.com/grlefl/Phase-2/assets/124198528/b91e1b72-1f04-4315-b03f-23ca16fbb015)
+![image](https://github.com/grlefl/Phase-2/assets/124198528/12d5aa31-72cb-40f2-a6ca-a2c061f1ca67)
 ![image](https://github.com/grlefl/Phase-2/assets/124198528/299d41e9-20c0-4a9e-91ac-bd32c78ad074)
 ![image](https://github.com/grlefl/Phase-2/assets/124198528/84096516-9e41-4306-8a1a-2764a50bee6e)
 ![image](https://github.com/grlefl/Phase-2/assets/124198528/f8a025cc-7dee-4a89-9d2e-cd2cab181225)
