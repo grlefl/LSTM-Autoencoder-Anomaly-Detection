@@ -1,4 +1,4 @@
-# Object Detection with the Manga109 Dataset
+# LSTM Autoencoder for Anomaly Detection in Sequential Data
 
 ## Table of Contents
 - [Project Status](#project-status)
