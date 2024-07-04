@@ -24,9 +24,10 @@ The dataset that is used is the daily closing prices of the S&P 500 index from 1
 
 ## Developer Documentation 
 This project is originally inspired by this article and github repository where a keras model is used for the LSTM autoencoder. My goal was to basically do this same project but with a PyTorch model to gain a deeper understanding of the autoencoder structure. The keras model is shown below, and here is the current structure of my pytorch autoencoder. 
-Solarized dark                                                                                                        |  Solarized Ocean
-:--------------------------------------------------------------------------------------------------------------------:|:-------------------------:
-![](![image](https://github.com/grlefl/LSTM-Autoencoder-SP500/assets/124198528/4dbfcb45-a69f-4077-a5dc-98f01fbb8861)  |  ![](![image](https://github.com/grlefl/LSTM-Autoencoder-SP500/assets/124198528/3589e746-5a12-44bb-924a-ef890c7426c2)
+Solarized dark                                                                                                            |  Solarized Ocean
+:------------------------------------------------------------------------------------------------------------------------:|:-------------------------:
+![image](![image](https://github.com/grlefl/LSTM-Autoencoder-SP500/assets/124198528/e863a33f-4e3c-42ec-8c67-3d538ec0ba3a) | ![image](![image](https://github.com/grlefl/LSTM-Autoencoder-SP500/assets/124198528/f6bb42a1-b280-4a5b-b942-51bb04e92faa)
+)
 
 The different parts of the program include data prep, something and etc. 
 
