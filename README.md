@@ -25,10 +25,10 @@ The dataset that is used is the daily closing prices of the S&P 500 index from 1
 ## Developer Documentation 
 This project was originally inspired by an [article](https://curiousily.com/posts/anomaly-detection-in-time-series-with-lstms-using-keras-in-python/) and [github repository](https://github.com/lestercardoz11/SP-500-index-anomaly-detection) where the LSTM autoencoder is a Keras model. My goal was to basically do this same project but with a PyTorch model to gain a deeper understanding of the autoencoder structure. The keras model is shown below, and here is the current structure of my pytorch autoencoder. 
 
-Keras Implementation 
+Keras Implementation (from [article](https://curiousily.com/posts/anomaly-detection-in-time-series-with-lstms-using-keras-in-python/))
 <img src="https://github.com/grlefl/LSTM-Autoencoder-SP500/assets/124198528/272eaac1-af0c-47ae-a338-b900e2d188d6" width="900" height=auto>
 
-My Pytorch Implementation 
+Pytorch Implementation 
 <img src="https://github.com/grlefl/LSTM-Autoencoder-SP500/assets/124198528/e863a33f-4e3c-42ec-8c67-3d538ec0ba3a" width="900" height=auto>
 <img src="https://github.com/grlefl/LSTM-Autoencoder-SP500/assets/124198528/f6bb42a1-b280-4a5b-b942-51bb04e92faa" width="900" height=auto>
 
