@@ -23,6 +23,7 @@ This program attempts to use an LSTM autoencoder to detect anomalies the daily c
 The dataset that is used is the daily closing prices of the S&P 500 index from 1986 to 2018. It is provided by [Patrick David](https://twitter.com/pdquant) and hosted on [Kaggle](https://www.kaggle.com/datasets/pdquant/sp500-daily-19862018). The data contains only two columns/features: the date and the closing price.
 
 ## Developer Documentation 
+-- TO BE COMPLETED -- 
 This project was originally inspired by an [article](https://curiousily.com/posts/anomaly-detection-in-time-series-with-lstms-using-keras-in-python/) and [github repository](https://github.com/lestercardoz11/SP-500-index-anomaly-detection) where the LSTM autoencoder is a Keras model... My goal was to basically do this same project but with a PyTorch model to gain a deeper understanding of the autoencoder structure. The keras model is shown below, and here is the current structure of my pytorch autoencoder. 
 
 Keras Implementation (from [article](https://curiousily.com/posts/anomaly-detection-in-time-series-with-lstms-using-keras-in-python/))
@@ -51,5 +52,6 @@ The different parts of the program include data prep, something and etc.
 ![image](https://github.com/grlefl/Phase-2/assets/124198528/1c7ae360-d4d2-4c1c-92bf-95826ab84f2d)
 
 ## Next Steps 
+-- TO BE COMPLETED -- 
 - implement the keras model to see if I can get some baseline results
 - keep working on the LSTM pytorch implementation, include dropouts etc 
