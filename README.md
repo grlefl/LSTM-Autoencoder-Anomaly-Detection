@@ -29,8 +29,8 @@ Keras Implementation
 <img src="https://github.com/grlefl/LSTM-Autoencoder-SP500/assets/124198528/272eaac1-af0c-47ae-a338-b900e2d188d6" width="900" height=auto>
 
 My Pytorch Implementation 
-![image](https://github.com/grlefl/LSTM-Autoencoder-SP500/assets/124198528/e863a33f-4e3c-42ec-8c67-3d538ec0ba3a)
-![image](https://github.com/grlefl/LSTM-Autoencoder-SP500/assets/124198528/f6bb42a1-b280-4a5b-b942-51bb04e92faa)
+<img src="https://github.com/grlefl/LSTM-Autoencoder-SP500/assets/124198528/e863a33f-4e3c-42ec-8c67-3d538ec0ba3a" width="900" height=auto>
+<img src="https://github.com/grlefl/LSTM-Autoencoder-SP500/assets/124198528/f6bb42a1-b280-4a5b-b942-51bb04e92faa" width="900" height=auto>
 
 The different parts of the program include data prep, something and etc. 
 
