@@ -23,7 +23,12 @@ This program attempts to use an LSTM autoencoder to detect anomalies the daily c
 The dataset that is used is the daily closing prices of the S&P 500 index from 1986 to 2018. It is provided by [Patrick David](https://twitter.com/pdquant) and hosted on [Kaggle](https://www.kaggle.com/datasets/pdquant/sp500-daily-19862018). The data contains only two columns/features: the date and the closing price.
 
 ## Developer Documentation 
-This project is originally inspired by this article and github repository where a keras model is used for the LSTM autoencoder. My goal was to basically do this same project but with a PyTorch model to gain a deeper understanding of the autoencoder structure. The keras model is shown below, and here is the current structure of my pytorch autoencoder. The different parts of the program include data prep, something and etc. 
+This project is originally inspired by this article and github repository where a keras model is used for the LSTM autoencoder. My goal was to basically do this same project but with a PyTorch model to gain a deeper understanding of the autoencoder structure. The keras model is shown below, and here is the current structure of my pytorch autoencoder. 
+Solarized dark                                                                                                        |  Solarized Ocean
+:--------------------------------------------------------------------------------------------------------------------:|:-------------------------:
+![](![image](https://github.com/grlefl/LSTM-Autoencoder-SP500/assets/124198528/4dbfcb45-a69f-4077-a5dc-98f01fbb8861)  |  ![](![image](https://github.com/grlefl/LSTM-Autoencoder-SP500/assets/124198528/3589e746-5a12-44bb-924a-ef890c7426c2)
+
+The different parts of the program include data prep, something and etc. 
 
 ## Results 
 The results for this project are not very good. Here they are: 
