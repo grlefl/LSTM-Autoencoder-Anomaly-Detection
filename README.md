@@ -11,7 +11,7 @@
 - [Next Steps](#next-steps) 
 
 ## Project Status 
-This project has not yet achieved results. <!-- [Next Steps](#next-steps) are listed below. -->
+This project has not yet achieved results. [Next Steps](#next-steps) are listed below.
 
 ## Overview 
 
