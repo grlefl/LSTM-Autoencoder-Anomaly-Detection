@@ -11,17 +11,23 @@
 - [Next Steps](#next-steps) 
 
 ## Project Status 
-This project has not yet achieved results. [Next Steps](#next-steps) are listed below.
+This project has not achieved viable results. [Next Steps](#next-steps) are listed below.
 
 ## Overview 
+This program *attempts* to use an LSTM autoencoder to detect anomalies the daily closing prices of the S&P 500 index. The autoencoder is trained exclusively on normal data without anomalies. When new data points are introduced to the model, they are classified as anomalies if they exceed a predefined threshold.
 
 ## User Documentation
+(incomplete) 
 
 ## Dataset 
+The dataset that is used is the daily closing prices of the S&P 500 index from 1986 to 2018. It is provided by [Patrick David](https://twitter.com/pdquant) and hosted on [Kaggle](https://www.kaggle.com/datasets/pdquant/sp500-daily-19862018). The data contains only two columns/features: the date and the closing price.
 
 ## Developer Documentation 
+This project is originally inspired by this article and github repository where a keras model is used for the LSTM autoencoder. My goal was to basically do this same project but with a PyTorch model to gain a deeper understanding of the autoencoder structure. The keras model is shown below, and here is the current structure of my pytorch autoencoder. The different parts of the program include data prep, something and etc. 
 
 ## Results 
+The results for this project are not very good. Here they are: 
+Initially I thought the data preparation was wrong, but I think the overall structure of the LSTM autoencoder is wrong. This article gives a really good indepth explanation about how the dimensions should be. There is dropout stuff that I forgot to add and whatever. 
 
 ## Presentation
 (youtube video not yet available)
@@ -37,3 +43,5 @@ This project has not yet achieved results. [Next Steps](#next-steps) are listed 
 ![image](https://github.com/grlefl/Phase-2/assets/124198528/1c7ae360-d4d2-4c1c-92bf-95826ab84f2d)
 
 ## Next Steps 
+- implement the keras model to see if I can get some baseline results
+- keep working on the LSTM pytorch implementation, include dropouts etc 
