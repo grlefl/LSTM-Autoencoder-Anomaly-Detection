@@ -3,22 +3,25 @@
 ## Table of Contents
 - [Project Status](#project-status)
 - [Overview](#overview)
+- [User Documentation](#user-documentation)
 - [Dataset](#dataset)
-<!-- - [Developer Documentation](#developer-documentation)-->
-<!-- - [Results](#results) -->
+- [Developer Documentation](#developer-documentation)
+- [Results](#results) 
 - [Presentation](#presentation)
-<!-- - [Next Steps](#next-steps) -->
+- [Next Steps](#next-steps) 
 
 ## Project Status 
 This project has not yet achieved results. <!-- [Next Steps](#next-steps) are listed below. -->
 
 ## Overview 
 
+## User Documentation
+
 ## Dataset 
 
-<!-- ## Developer Documentation -->
+## Developer Documentation 
 
-<!-- ## Results -->
+## Results 
 
 ## Presentation
 (youtube video not yet available)
