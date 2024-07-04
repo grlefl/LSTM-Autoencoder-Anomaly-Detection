@@ -17,7 +17,7 @@ This project has not achieved viable results. [Next Steps](#next-steps) are list
 This program attempts to use an LSTM autoencoder to detect anomalies the daily closing prices of the S&P 500 index. The autoencoder is trained exclusively on normal data without anomalies. When new data points are introduced to the model, they are classified as anomalies if they exceed a predefined threshold.
 
 ## User Documentation
-(incomplete) 
+(needs updating) 
 
 ## Dataset 
 The dataset that is used is the daily closing prices of the S&P 500 index from 1986 to 2018. It is provided by [Patrick David](https://twitter.com/pdquant) and hosted on [Kaggle](https://www.kaggle.com/datasets/pdquant/sp500-daily-19862018). The data contains only two columns/features: the date and the closing price.
