@@ -102,11 +102,11 @@ class Decoder(nn.Module):
 ```
 
 All code exists in the [`main.py`](https://github.com/grlefl/LSTM-Autoencoder-SP500/blob/main/main.ipynb) Jupyter Notebook. Important sections are listed below:
-- `Split & Standardize Data` - this is where 
-- `Prepare Datasets` - and then this 
-- `LSTM Autoencoder`
-- `Training Evaluation`
-- `Testing Visualization`
+- `Split & Standardize Data` - The data is split (without shuffling) into training, validation, and testing datasets. All datasets are standardized based on the training data. 
+- `Prepare Datasets` - All datasets are split into sequences, each with a certain number of time-steps. 
+- `LSTM Autoencoder` - Pytorch LSTM autoencoder implementation. 
+- `Training Evaluation` - Model is trained with the Adam optimizer and MSELoss. 
+- `Testing Visualization` - At this point, the training sequences are passed through the model and a baseline anomaly threshold is determined. However, the model did not output viable results that made sense in the context. 
 
 ## Results 
 (needs updating) See [Presentation](#presentation).
@@ -125,7 +125,5 @@ All code exists in the [`main.py`](https://github.com/grlefl/LSTM-Autoencoder-SP
 ![image](https://github.com/grlefl/Phase-2/assets/124198528/1c7ae360-d4d2-4c1c-92bf-95826ab84f2d)
 
 ## Next Steps 
--- TO BE COMPLETED -- 
-
-- implement the keras model to see if I can get some baseline results
-- keep working on the LSTM pytorch implementation, include dropouts etc 
+- implement the keras model to see if baseline/workable results can be achieved 
+- make LSTM pytorch implementation match more closely to keras, include dropouts etc 
