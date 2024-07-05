@@ -45,7 +45,7 @@ model.add(
 model.compile(loss='mae', optimizer='adam')
 ```
 
-My Pytorch Implementation 
+I developed my Pytorch implementation with guidance from the following article: [Step-by-step understanding LSTM Autoencoder layers](https://towardsdatascience.com/step-by-step-understanding-lstm-autoencoder-layers-ffab055b6352). It notably differs from the original Keras model by having a total of four LSTM layers instead of two, and there are no dropout layers. 
 
 ```
 class Encoder(nn.Module):
@@ -101,7 +101,12 @@ class Decoder(nn.Module):
         return self.output_layer(x)
 ```
 
-The different parts of the program include data prep, something and etc. 
+All code exists in the [`main.py`](https://github.com/grlefl/LSTM-Autoencoder-SP500/blob/main/main.ipynb) Jupyter Notebook. Important sections are listed below:
+- `Split & Standardize Data` - this is where 
+- `Prepare Datasets` - and then this 
+- `LSTM Autoencoder`
+- `Training Evaluation`
+- `Testing Visualization`
 
 ## Results 
 (needs updating) See [Presentation](#presentation).
