@@ -101,7 +101,7 @@ class Decoder(nn.Module):
         return self.output_layer(x)
 ```
 
-All code exists in the [`main.py`](https://github.com/grlefl/LSTM-Autoencoder-SP500/blob/main/main.ipynb) Jupyter Notebook. Important sections are listed below:
+All code exists in the [`main.ipynb`](https://github.com/grlefl/LSTM-Autoencoder-SP500/blob/main/main.ipynb) Jupyter Notebook. Important sections are listed below:
 - `Split & Standardize Data` - The data is split (without shuffling) into training, validation, and testing datasets. All datasets are standardized based on the training data. 
 - `Prepare Datasets` - All datasets are split into sequences, each with a certain number of time-steps. 
 - `LSTM Autoencoder` - Pytorch LSTM autoencoder implementation. 
