@@ -3,10 +3,10 @@
 ## Table of Contents
 - [Project Status](#project-status)
 - [Overview](#overview)
-- [User Documentation](#user-documentation)
+- [User Documentation](#user-documentation) (needs updating)
 - [Dataset](#dataset)
 - [Developer Documentation](#developer-documentation)
-- [Results](#results) 
+- [Results](#results) (needs updating)
 - [Presentation](#presentation)
 - [Next Steps](#next-steps) 
 
@@ -20,24 +20,91 @@ This program attempts to use an LSTM autoencoder to detect anomalies the daily c
 (needs updating) 
 
 ## Dataset 
-The dataset that is used is the daily closing prices of the S&P 500 index from 1986 to 2018. It is provided by [Patrick David](https://twitter.com/pdquant) and hosted on [Kaggle](https://www.kaggle.com/datasets/pdquant/sp500-daily-19862018). The data contains only two columns/features: the date and the closing price.
+The dataset includes the daily closing prices of the S&P 500 index from 1986 to 2018. It is provided by [Patrick David](https://twitter.com/pdquant) and hosted on [Kaggle](https://www.kaggle.com/datasets/pdquant/sp500-daily-19862018). The data contains only two columns/features: the date and the closing price.
 
 ## Developer Documentation 
--- TO BE COMPLETED -- 
-
-This project was originally inspired by an [article](https://curiousily.com/posts/anomaly-detection-in-time-series-with-lstms-using-keras-in-python/) and [github repository](https://github.com/lestercardoz11/SP-500-index-anomaly-detection) where the LSTM autoencoder is a Keras model... My goal was to basically do this same project but with a PyTorch model to gain a deeper understanding of the autoencoder structure. The keras model is shown below, and here is the current structure of my pytorch autoencoder. 
+This project was originally inspired by an [article](https://curiousily.com/posts/anomaly-detection-in-time-series-with-lstms-using-keras-in-python/) and [github repository](https://github.com/lestercardoz11/SP-500-index-anomaly-detection) where the LSTM autoencoder is a Keras model. My goal was to gain a better understanding of the LSTM autoencoder structure by achieving similar anomaly detection results with a Pytorch implemention.
 
 Keras Implementation (from [article](https://curiousily.com/posts/anomaly-detection-in-time-series-with-lstms-using-keras-in-python/))
-<img src="https://github.com/grlefl/LSTM-Autoencoder-SP500/assets/124198528/272eaac1-af0c-47ae-a338-b900e2d188d6" width="900" height=auto>
 
-Pytorch Implementation 
-<img src="https://github.com/grlefl/LSTM-Autoencoder-SP500/assets/124198528/e863a33f-4e3c-42ec-8c67-3d538ec0ba3a" width="900" height=auto>
-<img src="https://github.com/grlefl/LSTM-Autoencoder-SP500/assets/124198528/f6bb42a1-b280-4a5b-b942-51bb04e92faa" width="900" height=auto>
+```
+model = keras.Sequential()
+model.add(keras.layers.LSTM(
+    units=64,
+    input_shape=(X_train.shape[1], X_train.shape[2])
+))
+model.add(keras.layers.Dropout(rate=0.2))
+model.add(keras.layers.RepeatVector(n=X_train.shape[1]))
+model.add(keras.layers.LSTM(units=64, return_sequences=True))
+model.add(keras.layers.Dropout(rate=0.2))
+model.add(
+  keras.layers.TimeDistributed(
+    keras.layers.Dense(units=X_train.shape[2])
+  )
+)
+model.compile(loss='mae', optimizer='adam')
+```
+
+My Pytorch Implementation 
+
+```
+class Encoder(nn.Module):
+    def __init__(self, seq_len, n_features, embedding_dim=64):
+        super(Encoder, self).__init__()
+        self.seq_len, self.n_features = seq_len, n_features
+        self.embedding_dim, self.hidden_dim = embedding_dim, 2 * embedding_dim
+
+        # first LSTM layer
+        self.rnn1 = nn.LSTM(
+            input_size=n_features,
+            hidden_size=self.hidden_dim,
+            batch_first=True
+        )
+        # initializing the hidden numbers of layers
+        self.rnn2 = nn.LSTM(
+            input_size=self.hidden_dim,
+            hidden_size=embedding_dim,
+            batch_first=True
+        )
+
+    def forward(self, x):
+        x, (hidden_n, _) = self.rnn1(x)  # input (batch, seq_len, n_features)
+        x, (_, _) = self.rnn2(x)  # hidden state is input for next layer, output last layer of LSTM
+        return x
+```
+
+```
+class Decoder(nn.Module):
+    def __init__(self, seq_len, input_dim=64, n_features=1):
+        super(Decoder, self).__init__()
+        self.seq_len, self.input_dim = seq_len, input_dim
+        self.hidden_dim, self.n_features = 2 * input_dim, n_features
+
+        # first LSTM layer
+        self.rnn1 = nn.LSTM(
+            input_size=input_dim,
+            hidden_size=input_dim,
+            batch_first=True
+        )
+        # using a dense layer as an output layer
+        self.rnn2 = nn.LSTM(
+            input_size=input_dim,
+            hidden_size=self.hidden_dim,
+            batch_first=True
+        )
+
+        self.output_layer = nn.Linear(self.hidden_dim, n_features)  # reduce features to match input
+
+    def forward(self, x):
+        x, (hidden_n, _) = self.rnn1(x)
+        x, (_, _) = self.rnn2(x)  # hidden state is input for next layer, output last layer of LSTM
+        return self.output_layer(x)
+```
 
 The different parts of the program include data prep, something and etc. 
 
 ## Results 
-(needs updating) See [Presentation](#presentation) 
+(needs updating) See [Presentation](#presentation).
 
 ## Presentation
 (youtube video not yet available)
