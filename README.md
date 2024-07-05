@@ -45,7 +45,7 @@ model.add(
 model.compile(loss='mae', optimizer='adam')
 ```
 
-I developed my Pytorch implementation with guidance from the following article: [Step-by-step understanding LSTM Autoencoder layers](https://towardsdatascience.com/step-by-step-understanding-lstm-autoencoder-layers-ffab055b6352). It notably differs from the original Keras model by having a total of four LSTM layers instead of two, and there are no dropout layers. 
+I developed the Pytorch implementation with guidance from the following article: [Step-by-step understanding LSTM Autoencoder layers](https://towardsdatascience.com/step-by-step-understanding-lstm-autoencoder-layers-ffab055b6352). It notably differs from the original Keras model by having a total of four LSTM layers instead of two, and there are no dropout layers. 
 
 ```
 class Encoder(nn.Module):
